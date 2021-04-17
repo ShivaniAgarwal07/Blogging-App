@@ -2,7 +2,7 @@
 // a stateless functional component
 const NavBar = () => {
     return (
- <nav className='NavBar'>
+ <nav className='navbar'>
         <h2>Nav</h2>
         <div className="links">
             <a href="/">Home</a>
