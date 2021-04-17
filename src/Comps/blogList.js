@@ -1,4 +1,3 @@
-import {useState} from 'react';
 import Emoji from 'a11y-react-emoji'
 
 const BlogList = ({bloglist,title,handleDelete}) => {
