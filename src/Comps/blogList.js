@@ -1,5 +1,7 @@
 import {useState} from 'react';
- const BlogList = ({bloglist,title,handleDelete}) => {
+import Emoji from 'a11y-react-emoji'
+
+const BlogList = ({bloglist,title,handleDelete}) => {
     return ( <>
     <h1>{title}</h1>
         {
@@ -14,7 +16,10 @@ import {useState} from 'react';
                 <button
                 onClick={() =>handleDelete(blog.id)}
                 >
-                    ❌
+                   <Emoji
+                   symbol="❌"
+                   label="Delete"
+                   ></Emoji> 
                 </button>
             </div>
             ))
