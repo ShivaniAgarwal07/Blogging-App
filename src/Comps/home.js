@@ -35,10 +35,10 @@ const Home = () => {
     }
     return ( 
         <div className="home">
-            <BlogList bloglist={blogs} title="All Blogs!"/>
+            <BlogList bloglist={blogs} title="All Blogs!" handleDelete={handledelete}/>
         
         {/* reusing blogs comp with diff filtered data */}
-            <BlogList bloglist={blogs.filter((blog) =>blog.author==="Abhishek")} title="Blogs by Abhishek"/>
+            {/* <BlogList bloglist={blogs.filter((blog) =>blog.author==="Abhishek")} title="Blogs by Abhishek"/> */}
         </div>  
      );
 }
