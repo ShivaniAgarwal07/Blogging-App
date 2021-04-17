@@ -42,7 +42,7 @@ const Home = () => {
         className="blogs">
                 <h2>{blog.title}</h2>
                 <p>{blog.body}</p>
-                <h3>{blog.author}</h3>
+                <h3>Writtern by :{blog.author}</h3>
             </div>
             ))
            }
