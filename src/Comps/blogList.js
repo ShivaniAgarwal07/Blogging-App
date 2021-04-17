@@ -1,12 +1,10 @@
 import {useState} from 'react';
- const BlogList = (props) => {
-   const bloglist = props.bloglist
-   const title=props.title;
+ const BlogList = ({bloglist,title}) => {
     return ( <>
+    <h1>{title}</h1>
         {
       bloglist.map((blog)=>(
-        <div 
-        
+        <div      
         // EACH element must have a unique key property :- react uses to track each item in DOM by key
         key={blog.id}
         className="blogs">
