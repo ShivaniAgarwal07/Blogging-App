@@ -44,8 +44,12 @@
   margin:20px 0;
   border-bottom:#fafafa;
 }
+.blogs:hover{
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.1);
+}
 
 .blogs h2{
+  color:#f1356d;
   margin: 10px 0;
 }
 
@@ -54,8 +58,10 @@
 }
 
 .blogs h3{
+  font-family: cursive;
   float:right;
   padding:5px;
+  font-size: 16px;
   color:white;
   border-radius: 8px;
   background-color: #f1356d;
