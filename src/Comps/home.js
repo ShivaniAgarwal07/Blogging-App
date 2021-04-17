@@ -1,18 +1,38 @@
 import {useState} from 'react';
 
 const Home = () => {
-    const [reactive, setReactive] = useState("Abhishek");
-    const changevalue = () => {
-        var name = prompt("Please input your name");
-        setReactive(name);
-    }
+   
+    // using array of blogs for our page
+    const [blogs, setBlogs] = useState([
+        {
+        title:"My New Website", 
+        body:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis ducimus voluptatem facilis. Doloremque consequatur ipsa ex tempore corrupti, veritatis nihil!",
+        author:"Moonwalker",
+        id:1
+        },
+        {
+        title:"My New Website", 
+        body:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis ducimus voluptatem facilis. Doloremque consequatur ipsa ex tempore corrupti, veritatis nihil!",
+        author:"Moonwalker",
+        id:1
+        },
+        {
+        title:"My New Website", 
+        body:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis ducimus voluptatem facilis. Doloremque consequatur ipsa ex tempore corrupti, veritatis nihil!",
+        author:"Moonwalker",
+        id:2
+        },
+        {
+        title:"My New Website", 
+        body:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis ducimus voluptatem facilis. Doloremque consequatur ipsa ex tempore corrupti, veritatis nihil!",
+        author:"Moonwalker",
+        id:3
+        },
+    ])
+
     return ( 
         <div className="home">
-            <h2>HomePage</h2>
-            <h3>Hello {reactive}</h3>
-            <button onClick={changevalue}>
-                ChangeName
-            </button>
+           
         </div>  
      );
 }
