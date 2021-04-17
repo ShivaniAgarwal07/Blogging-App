@@ -57,6 +57,13 @@
   margin:6px 0;
 }
 
+.blogs button{
+  padding:4px 1px;
+  width:10%;
+  background-color:#fff;
+  border:1px solid black;
+}
+
 .blogs h3{
   font-family: cursive;
   float:right;
