@@ -4,7 +4,10 @@ function App() {
   return (
     <div className='App'>
     <NavBar/>
-   <Home/>
+    <div className="content">
+    <Home/>
+    </div>
+
     </div>
   );
 }
