@@ -18,22 +18,27 @@ const Home = () => {
         {
         title:"My Sec Website", 
         body:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis ducimus voluptatem facilis. Doloremque consequatur ipsa ex tempore corrupti, veritatis nihil!",
-        author:"Moonwalker",
+        author:"Abhishek",
         id:2
         },
         {
         title:"My Latest Website", 
         body:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis ducimus voluptatem facilis. Doloremque consequatur ipsa ex tempore corrupti, veritatis nihil!",
-        author:"Moonwalker",
+        author:"Abhishek",
         id:3
         },
     ])    
+
+    const handledelete = (id) => {
+        const newBlogs = blogs.filter(blog => blog.id !== id);
+        setBlogs(newBlogs);
+    }
     return ( 
         <div className="home">
-            <BlogList
-            bloglist={blogs}
-            title="My Latest Website"
-            />
+            <BlogList bloglist={blogs} title="All Blogs!"/>
+        
+        {/* reusing blogs comp with diff filtered data */}
+            <BlogList bloglist={blogs.filter((blog) =>blog.author==="Abhishek")} title="Blogs by Abhishek"/>
         </div>  
      );
 }
