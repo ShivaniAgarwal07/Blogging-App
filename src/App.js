@@ -1,4 +1,3 @@
-import './App.css';
 import NavBar from './Comps/nav';
 import Home from './Comps/home';
 function App() {
