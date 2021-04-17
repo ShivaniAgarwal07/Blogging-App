@@ -1,10 +1,11 @@
 import './App.css';
 import NavBar from './Comps/nav';
+import Home from './Comps/home';
 function App() {
   return (
     <div className='App'>
     <NavBar/>
-    <h1>Root component</h1>
+   <Home/>
     </div>
   );
 }
