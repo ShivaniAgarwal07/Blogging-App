@@ -32,7 +32,20 @@ const Home = () => {
 
     return ( 
         <div className="home">
-           
+           {/* using map() to iterate through blogs array to view  */}
+           {
+            blogs.map((blog)=>(
+        <div 
+        
+        // EACH element must have a unique key property :- react uses to track each item in DOM by key
+        key={blog.id}
+        className="blogs">
+                <h2>{blog.title}</h2>
+                <p>{blog.body}</p>
+                <h3>{blog.author}</h3>
+            </div>
+            ))
+           }
         </div>  
      );
 }
