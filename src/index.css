@@ -38,3 +38,25 @@
   margin:40px auto;
   padding:20px;
 }
+
+.blogs{
+  padding: 10px 16px;
+  margin:20px 0;
+  border-bottom:#fafafa;
+}
+
+.blogs h2{
+  margin: 10px 0;
+}
+
+.blogs p{
+  margin:6px 0;
+}
+
+.blogs h3{
+  float:right;
+  padding:5px;
+  color:white;
+  border-radius: 8px;
+  background-color: #f1356d;
+}
