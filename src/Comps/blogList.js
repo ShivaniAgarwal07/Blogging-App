@@ -1,5 +1,5 @@
 import {useState} from 'react';
- const BlogList = ({bloglist,title}) => {
+ const BlogList = ({bloglist,title,handleDelete}) => {
     return ( <>
     <h1>{title}</h1>
         {
@@ -11,6 +11,11 @@ import {useState} from 'react';
                 <h2>{blog.title}</h2>
                 <p>{blog.body}</p>
                 <h3>Writtern by :{blog.author}</h3>
+                <button
+                onClick={() =>handleDelete(blog.id)}
+                >
+                    ❌
+                </button>
             </div>
             ))
                }
