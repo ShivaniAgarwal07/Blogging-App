@@ -14,19 +14,15 @@ const Home = () => {
     }
 
     useEffect(()=>{
-
-    fetch("http://localhost:8000/blogs")
-    .then((response) =>{ return response.json()})
-    .then((data) =>setBlogs(data))
-    setPending(false);
-
-        // For simulation purpose
-    //     setTimeout(()=>{
-    //     fetch("http://localhost:8000/blogs")
-    //     .then((response) =>{ return response.json()})
-    //     .then((data) =>setBlogs(data))
-    //     setPending(false);
-    // },1000);
+      fetch("http://localhost:8000/blogs")
+      .then(response=>{ return response.json()})
+      .then(data=>{
+          setBlogs(data);
+          setPending(false);  
+      })
+      .catch(err=>{
+          console.log(err.message);
+      })
     },[])
 
     return ( 
