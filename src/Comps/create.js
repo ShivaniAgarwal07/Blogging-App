@@ -1,6 +1,11 @@
 import {useState} from 'react';
+import {useHistory} from 'react-router-dom';
+
+
 const CreateBlog = () => {
 
+
+    const history = useHistory();
     // declaring some states to manage the form input values 
     const [title, setTitle] =useState("");
     const [body, setbody] = useState("");
@@ -25,6 +30,8 @@ const CreateBlog = () => {
         // since this is async function and returns a promie, we can pass then method to fire a function
         .then(()=>{
             setPending(false);
+            // history.go(-1);
+            history.push("/");
         })
     }
 
@@ -39,10 +46,10 @@ const CreateBlog = () => {
             value={title}
             name="" id=""/>
             <label>Content</label>
-            <textArea
+            <textarea
             onChange={(event)=>setbody(event.target.value)}
             value={body}
-            required></textArea>
+            required></textarea>
             <label>Author</label>
             <select
             onChange={(event)=>setAuthor(event.target.value)}
