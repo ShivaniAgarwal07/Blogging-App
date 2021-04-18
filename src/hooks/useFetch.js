@@ -22,7 +22,9 @@ const useFetch = (url) => {
           setPending(false); 
           setError(err.message);
       })
-    },[]);
+    },[url]); // URL as dependency :- whenever URL changes, Data will be fetched again
+
+
     // returing all reqd values
     return {data,error,isPending};
 
