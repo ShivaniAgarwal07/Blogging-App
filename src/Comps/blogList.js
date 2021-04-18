@@ -1,6 +1,6 @@
 import Emoji from 'a11y-react-emoji'
 
-const BlogList = ({bloglist,title,handleDelete}) => {
+const BlogList = ({bloglist,title}) => {
     return ( <>
     <h1>{title}</h1>
         {
@@ -13,7 +13,7 @@ const BlogList = ({bloglist,title,handleDelete}) => {
                 <p>{blog.body}</p>
                 <h3>Writtern by :{blog.author}</h3>
                 <button
-                onClick={() =>handleDelete(blog.id)}
+               //  onClick={() =>handleDelete(blog.id)}
                 >
                    <Emoji
                    symbol="❌"
