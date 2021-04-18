@@ -55,6 +55,7 @@ const CreateBlog = () => {
             onChange={(event)=>setAuthor(event.target.value)}
             value={author}
             name="" id="">
+                <option value="">---Select----</option>
                 <option value="Abhishek">Abhishek</option>
                 <option value="Moonwalker">Moonwalker</option>
             </select>
