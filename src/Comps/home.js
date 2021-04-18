@@ -1,38 +1,15 @@
 import BlogList from "./blogList"
 import {useState,useEffect} from 'react';
-
+import useFetch from '../hooks/useFetch'
 const Home = () => {
-
-    const handledelete = (id) => {
-        const newBlogs = blogs.filter(blog => blog.id !== id);
-        setBlogs(newBlogs);
-    }
-
-    useEffect(()=>{
-      fetch("http://localhost:8000/blogs")
-      .then(response=>{ 
-          if(!response.ok){
-              throw Error("Could not resolve host !")
-          }
-        return response.json()
-
-      })
-      .then(data=>{
-          setBlogs(data);
-          setError(null); 
-          setPending(false); 
-      })
-      .catch(err=>{
-        setPending(false); 
-        setError(err.message);
-    })
-    },[])
+    const url = "http://localhost:8000/blogs";
+    const {data: blogs,error,isPending} = useFetch(url);
 
     return ( 
         <div className="home">
             {error && <div className="error">{error}</div>}
             {isPending && <div>Loading  . . .</div>}
-            {blogs &&  <BlogList bloglist={blogs} title="All Blogs!" handleDelete={handledelete}/>}
+            {blogs &&  <BlogList bloglist={blogs} title="All Blogs!" />}
         {/* reusing blogs comp with diff filtered data */}
             {/* <BlogList bloglist={blogs.filter((blog) =>blog.author==="Abhishek")} title="Blogs by Abhishek"/> */}
         </div>  
