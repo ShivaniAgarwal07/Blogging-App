@@ -1,6 +1,14 @@
 
-import {useEffect} from 'react';
+import {useState,useEffect} from 'react';
 const useFetch = ({url}) => {
+    const [blogs, setBlogs] = useState(null );    
+
+    const [error, setError] = useState(null);
+
+    // loading comp / piece of state
+    const [isPending, setPending] = useState(true);
+
+
     return ( useEffect(()=>{
         fetch(url)
         .then(response=>{ 
