@@ -134,7 +134,10 @@
   padding:8px 8px;
 }
 
+.create select{
 
+  margin:0px auto;
+  }
 .create button:hover{
   background-color:rgba(44, 192, 44, 0.822);
 }
