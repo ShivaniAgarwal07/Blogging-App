@@ -5,7 +5,7 @@ const CreateBlog = () => {
     const [title, setTitle] =useState("");
     const [body, setbody] = useState("");
     const [author, setAuthor] = useState("");
-
+    const [isPending,setPending] = useState(false);
 
     const handleSubmit = (evt) => {
         // Prevent form being refreshed every time button is clicked / submitted
@@ -14,6 +14,18 @@ const CreateBlog = () => {
         // for POST request, we need not have to create id, JSON Server will automatically assign one 
         const newblog = {title,body,author};
         console.log(newblog);
+        setPending(true);
+
+        // pushing new data to server :- Post request
+        fetch("http://localhost:8000/blogs",{
+            method: "POST",
+            headers:{"Content-Type": "application/json"},
+            body: JSON.stringify(newblog),
+        })
+        // since this is async function and returns a promie, we can pass then method to fire a function
+        .then(()=>{
+            setPending(false);
+        })
     }
 
     return ( <div className="create">
@@ -39,7 +51,9 @@ const CreateBlog = () => {
                 <option value="Abhishek">Abhishek</option>
                 <option value="Moonwalker">Moonwalker</option>
             </select>
-            <button>Add Blog</button>
+        {!isPending &&<button>Add Blog</button>}
+        {isPending &&<button>Adding Blog ....</button>}
+        
         </form>
     </div> 
     );
