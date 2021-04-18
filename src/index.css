@@ -77,3 +77,67 @@
   border-radius: 8px;
   background-color: #f1356d;
 }
+
+
+/* Styling for Form : Add new blog */
+
+.create{
+  padding:0 3px;
+  max-width: 400px;
+  margin:-40px auto;
+  /* box-shadow:1px 2px 2px #333; */
+  box-shadow:1px 1px 8px #333;
+}
+.create h2{
+  margin:8px auto;
+  text-decoration: underline;
+  text-align: center;
+  color:#f1356d;
+  font-size:20px;
+}
+.create form {
+  margin: 12px auto;
+  display:flex;
+  flex-flow:column wrap;
+  background-color: #fafafa;
+}
+
+.create form label {
+  color:#333;
+  display:block;
+  font-weight: 700;
+  margin: 10px auto;
+}
+
+
+.create input{
+  text-align:center;
+  font-weight: bold;
+  height:12px;
+  padding:8px 5px;
+}
+
+.create textarea{
+  height:80px;
+  padding:8px 5px;
+}
+
+.create select{
+  
+  font-weight: bold;
+}
+.create button{
+  margin: 22px auto;
+  color:white;
+  background-color: #f1356d;
+  padding:8px 8px;
+}
+
+
+.create button:hover{
+  background-color:rgba(44, 192, 44, 0.822);
+}
+
+
+
+

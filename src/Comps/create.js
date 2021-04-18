@@ -1,7 +1,6 @@
 const CreateBlog = () => {
     return ( <div className="create">
-        <h2>Add New Blog</h2>
-        <form>
+        <form><h2>Add New Blog</h2>
             <label>Blog Title</label>
             <input required type="text" name="" id=""/>
             <label>Content</label>
@@ -11,6 +10,7 @@ const CreateBlog = () => {
                 <option value="Abhishek">Abhishek</option>
                 <option value="Moonwalker">Moonwalker</option>
             </select>
+            <button>Add Blog</button>
         </form>
     
     </div> 
