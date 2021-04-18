@@ -1,5 +1,4 @@
 import BlogList from "./blogList"
-import {useState,useEffect} from 'react';
 import useFetch from '../hooks/useFetch'
 const Home = () => {
     const url = "http://localhost:8000/blogs";
