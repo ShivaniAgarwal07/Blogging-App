@@ -3,6 +3,7 @@ import Home from './Comps/home';
 import CreateBlog from './Comps/create';
 import {BrowserRouter as Router , Route, Switch } from 'react-router-dom'
 import BlogDetails from './Comps/blogDetails';
+import NotFound from './Comps/notFound';
 function App() {
   return (
     <Router>
@@ -23,6 +24,11 @@ function App() {
      {/* Route 3 : BlogDetails Comp */}
      <Route exact path='/details/:id'>
       <BlogDetails/>
+    </Route>
+
+     {/* Route 3 : BlogDetails Comp */}
+     <Route exact path='*'>
+      <NotFound/>
     </Route>
     </Switch>
     </div>
