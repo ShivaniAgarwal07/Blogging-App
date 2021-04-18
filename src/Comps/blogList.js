@@ -1,4 +1,4 @@
-import Emoji from 'a11y-react-emoji'
+
 import {Link} from 'react-router-dom';
 const BlogList = ({bloglist,title}) => {
     return ( <>
@@ -14,12 +14,7 @@ const BlogList = ({bloglist,title}) => {
                  <p>{blog.body}</p>
                 <h3>Writtern by :{blog.author}</h3>
               </Link>
-                <button>
-                   <Emoji
-                   symbol="❌"
-                   label="Delete"
-                   ></Emoji> 
-                </button>
+               
             </div>
             ))
                }
