@@ -3,11 +3,24 @@ const CreateBlog = () => {
 
     // declaring some states to manage the form input values 
     const [title, setTitle] =useState("");
-    const [content, setContent] = useState("");
+    const [body, setbody] = useState("");
     const [author, setAuthor] = useState("");
 
+
+    const handleSubmit = (evt) => {
+        // Prevent form being refreshed every time button is clicked / submitted
+        evt.preventDefault();
+
+        // for POST request, we need not have to create id, JSON Server will automatically assign one 
+        const newblog = {title,body,author};
+        console.log(newblog);
+    }
+
     return ( <div className="create">
-        <form><h2>Add New Blog</h2>
+        <form
+        onSubmit={handleSubmit}
+        >
+            <h2>Add New Blog</h2>
             <label>Blog Title</label>
             <input required type="text" 
             onChange={(event)=>setTitle(event.target.value)}
@@ -15,8 +28,8 @@ const CreateBlog = () => {
             name="" id=""/>
             <label>Content</label>
             <textArea
-            onChange={(event)=>setContent(event.target.value)}
-            value={content}
+            onChange={(event)=>setbody(event.target.value)}
+            value={body}
             required></textArea>
             <label>Author</label>
             <select
