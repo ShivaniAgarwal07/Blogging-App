@@ -1,7 +1,7 @@
 
 import {useState,useEffect} from 'react';
 const useFetch = ({url}) => {
-    const [blogs, setBlogs] = useState(null );    
+    const [data, setData] = useState(null );    
 
     const [error, setError] = useState(null);
 
@@ -19,7 +19,7 @@ const useFetch = ({url}) => {
     
         })
         .then(data=>{
-            setBlogs(data);
+            setData(data);
             setError(null); 
             setPending(false); 
         })
