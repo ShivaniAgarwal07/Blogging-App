@@ -2,13 +2,6 @@ import BlogList from "./blogList"
 import {useState,useEffect} from 'react';
 
 const Home = () => {
-    const [blogs, setBlogs] = useState(null );    
-
-    const [error, setError] = useState(null);
-
-    // loading comp / piece of state
-    const [isPending, setPending] = useState(true);
-
 
     const handledelete = (id) => {
         const newBlogs = blogs.filter(blog => blog.id !== id);
