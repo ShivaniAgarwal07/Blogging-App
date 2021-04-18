@@ -1,18 +1,18 @@
-// emmet -> sfc + tab
-// a stateless functional component
+import {Link} from 'react-router-dom';
+
 const NavBar = () => {
     return (
  <nav className='navbar'>
         <h2>Nav</h2>
         <div className="links">
-            <a href="/">Home</a>
-            <a href="/color"
+            <Link to="/">Home</Link>
+            <Link to="/create"
             style={{
                 color:"white",
                 borderRadius:"8px",
                 backgroundColor:"#f1356d"
             }}
-            >New Blog</a>
+            >New Blog</Link>
         </div>
     </nav> 
     );
