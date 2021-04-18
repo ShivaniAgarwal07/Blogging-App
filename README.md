@@ -1,4 +1,6 @@
-## This Web Application is an online blogs sharing, writing app built using React JS
+## This Web Application is an online blogs sharing & writing. 
+- CRUD Operations available
+- App built using React JS
  
 
 ## Available Scripts
