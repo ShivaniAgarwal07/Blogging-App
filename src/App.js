@@ -21,7 +21,7 @@ function App() {
     </Route>
 
      {/* Route 3 : BlogDetails Comp */}
-     <Route exact path='/details:id'>
+     <Route exact path='/details/:id'>
       <BlogDetails/>
     </Route>
     </Switch>
