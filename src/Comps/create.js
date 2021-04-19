@@ -42,19 +42,14 @@ const CreateBlog = () => {
             <h2>Add New Blog</h2>
             <label>Blog Title</label>
             <input required type="text" 
-            onChange={(event)=>setTitle(event.target.value)}
-            value={title}
-            name="" id=""/>
+            onChange={(event)=>setTitle(event.target.value)}/>
             <label>Content</label>
             <textarea
             onChange={(event)=>setbody(event.target.value)}
-            value={body}
-            required></textarea>
+           required></textarea>
             <label>Author</label>
             <select
-            onChange={(event)=>setAuthor(event.target.value)}
-            value={author}
-            name="" id="">
+            onChange={(event)=>setAuthor(event.target.value)}>
                 <option value="">---Select----</option>
                 <option value="Abhishek">Abhishek</option>
                 <option value="Moonwalker">Moonwalker</option>
